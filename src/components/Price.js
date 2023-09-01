@@ -18,7 +18,7 @@ export function Price(props) {
     
     const price = new BN(data.Ok.value.replace(/,/g,"")).div(BN_18);
     const formatedPrice = formatTokenBalance(data.Ok.value.replace(/,/g,""),"USD",props.decimals)
-    console.log(data,price)
+    console.log("price",data,price)
     setPrice(formatedPrice);
   } 
 

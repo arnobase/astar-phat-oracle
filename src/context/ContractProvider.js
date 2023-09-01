@@ -9,23 +9,9 @@ export const ContractProvider = ({ children }) => {
   const { api, network } = useContext(ApiContext);
   const [oracleContract, setOracleContract] = useState();
 
-  console.log("pouet0");
-
   useEffect(() => {
-    console.log("useEffect")
-    //console.log("loadRewardManagerContract")
     if (api) loadOracleContract();
   }, [api]);
-  
-  /*
-  useEffect(()=>{
-    if (oracleContract) {
-      console.log("sendQuery")
-      const {data} = sendQuery("1");
-      console.log(data)
-    }
-  },[oracleContract])
-  */
 
   const loadOracleContract = async () => {
     try { 
@@ -39,7 +25,6 @@ export const ContractProvider = ({ children }) => {
   };
 
   const getTradingPair = async(tradingPairId)=>{
-    //console.log("sending DryRun on "+network+" for contract: ",rewardManagerContract.address.toString())
     // Get the initial gas WeightV2 using api.consts.system.blockWeights['maxBlock']
     const gasLimit = api.registry.createType(
       'WeightV2',
@@ -61,7 +46,6 @@ export const ContractProvider = ({ children }) => {
       tradingPairId
     )
   
-  // console.log("oracleContractPromise",await oracleContractPromise)
    const { gasRequired, storageDeposit, result } = await oracleContractPromise;
 
     // Check for errors
