@@ -8,7 +8,7 @@ export function Price(props) {
   
   const {oracleContract, getTradingPair} = useContext(ContractContext);
   const [price, setPrice] = useState();
-  const BN_18 = new BN(10).pow(new BN(props.decimals));
+
   useEffect(()=>{
     if (oracleContract) doQuery()
   },[oracleContract])
@@ -16,9 +16,8 @@ export function Price(props) {
   const doQuery = async () =>{
     const {data} = await getTradingPair(props.pairId);
     
-    const price = new BN(data.Ok.value.replace(/,/g,"")).div(BN_18);
     const formatedPrice = formatTokenBalance(data.Ok.value.replace(/,/g,""),"USD",props.decimals)
-    console.log("price",data,price)
+    console.log("price",data,formatedPrice)
     setPrice(formatedPrice);
   } 
 
