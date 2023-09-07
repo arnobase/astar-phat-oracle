@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import { options } from "@astar-network/astar-api";
 import { PROVIDER_ENDPOINTS } from "../lib/constants";
 
-export const ApiContext = React.createContext();
+export const AstarApiContext = React.createContext();
 
-export const ApiProvider = ({ children }) => {
+export const AstarApiProvider = ({ children }) => {
   const [api, setapi] = useState();
   const [network, setNetwork] = useState("shibuya");
 
@@ -27,7 +27,7 @@ export const ApiProvider = ({ children }) => {
   };
 
   return (
-    <ApiContext.Provider
+    <AstarApiContext.Provider
       value={{
         api,
         network,
@@ -35,6 +35,6 @@ export const ApiProvider = ({ children }) => {
       }}
     >
       {children}
-    </ApiContext.Provider>
+    </AstarApiContext.Provider>
   );
 };

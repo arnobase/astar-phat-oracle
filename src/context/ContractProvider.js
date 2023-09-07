@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Abi, ContractPromise } from "@polkadot/api-contract";
-import { ApiContext } from "../context/ApiProvider";
+import { AstarApiContext } from "./AstarApiProvider";
 import { ORACLE_CONTRACT_ABI_METADATA, ORACLE_CONTRACT_ADDRESS } from "../lib/constants";
 
 export const ContractContext = React.createContext();
 
 export const ContractProvider = ({ children }) => {
-  const { api, network } = useContext(ApiContext);
+  const { api, network } = useContext(AstarApiContext);
   const [oracleContract, setOracleContract] = useState();
 
   useEffect(() => {

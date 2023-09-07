@@ -641,7 +641,7 @@
   dependencies:
     "@open-web3/orml-type-definitions" "1.1.4"
 
-"@phala/sdk@latest":
+"@phala/sdk@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@phala/sdk/-/sdk-0.5.0.tgz#1288e6f6537a0fe4a577a8d70be078ba0b6e27a4"
   integrity sha512-uoNU6jNzCdilHUYYWZTAtcnyZ/wdI7hSmaevZBGGIV9Vi35dptgebxS/ZXMmmBfY6f8lSrn/hZVz8G/3KAZk9g==
@@ -1780,6 +1780,11 @@ data-uri-to-buffer@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz#d8feb2b2881e6a4f58c2e08acfd0e2834e26222e"
   integrity sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==
+
+dayjs@^1.11.9:
+  version "1.11.9"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.9.tgz#9ca491933fadd0a60a2c19f6c237c03517d71d1a"
+  integrity sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==
 
 debug@^4.1.0:
   version "4.3.4"

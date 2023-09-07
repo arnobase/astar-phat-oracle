@@ -7,7 +7,7 @@ export function AppHeader() {
   const { dappName } = useContext(AppContext);
 
   return (<>
-    <Typography variant="h3" gutterBottom>
+    <Typography fontFamily={"unbounded"} variant="h3" gutterBottom>
         {dappName}
     </Typography>
   </>);
