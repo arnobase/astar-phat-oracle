@@ -1,4 +1,4 @@
-export const DAPP_NAME = "Price Feed Oracle";
+export const DAPP_NAME = "Decentralized Oracles";
 
 export const SS58_PREFIX = {
   astar:5,

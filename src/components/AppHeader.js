@@ -8,7 +8,8 @@ export function AppHeader() {
 
   return (<>
     <Typography fontFamily={"unbounded"} variant="h3" gutterBottom>
-        {dappName}
+        
+        <span style={{color:"#CC0060"}}>Dec</span>entralized <span style={{color:"#CC0060"}}>Or</span>acle
     </Typography>
   </>);
   
