@@ -7,6 +7,7 @@ import { coins } from '../lib/coins';
 import { PhatContractCall } from './PhatContractCall';
 import { AppContext } from '../context/ContextProvider';
 import dayjs from 'dayjs';
+import rollupSVG from "../images/rollup.svg"
 
 //Object.values(coins).forEach((ele)=>{console.log(ele)})
 
@@ -39,7 +40,7 @@ export function Content() {
     </List>
   </Box>
   <Box>
-    <img style={{width:"100%"}} src="src/images/rollup.svg" alt="SVG as an image" />
+    <img style={{width:"100%"}} src={rollupSVG} alt="SVG as an image" />
   </Box>
   </>;
   
