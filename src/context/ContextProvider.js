@@ -12,6 +12,7 @@ export const ContextProvider = ({ children }) => {
   const [phatOk, setPhatOk] = useState();
   const [phatError, setPhatError] = useState();
   const [lastUpdate, setLastUpdate] = useState();
+  const [queryTime, setQueryTime] = useState();
 
   useEffect(()=>{
     const load = async () => {
@@ -35,7 +36,9 @@ export const ContextProvider = ({ children }) => {
         phatError,
         setPhatError,
         lastUpdate, 
-        setLastUpdate
+        setLastUpdate,
+        queryTime,
+        setQueryTime
       }}
     >
       {children}

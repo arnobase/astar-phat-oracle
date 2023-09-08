@@ -7,10 +7,9 @@ export function AppHeader() {
   const { dappName } = useContext(AppContext);
 
   return (<>
-    <Typography fontFamily={"unbounded"} variant="h3" gutterBottom>
+    <Typography width={"100%"} fontFamily={"unbounded"} variant="h3" gutterBottom>
         
         <span style={{color:"#CC0060"}}>Dec</span>entralized <span style={{color:"#CC0060"}}>Or</span>acle
     </Typography>
   </>);
-  
 }

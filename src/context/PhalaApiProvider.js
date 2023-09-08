@@ -38,6 +38,7 @@ export const PhalaApiProvider = ({ children }) => {
     <PhalaApiContext.Provider
       value={{
         api,
+        provider,
         setProvider,
         connectApi
       }}

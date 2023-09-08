@@ -8,6 +8,7 @@ export const AstarApiContext = React.createContext();
 export const AstarApiProvider = ({ children }) => {
   const [api, setapi] = useState();
   const [network, setNetwork] = useState("shibuya");
+  const [provider, setProvider] = useState()
 
   useEffect(() => {
     console.log("CONNECTAPI NETWORK",network)
@@ -17,6 +18,7 @@ export const AstarApiProvider = ({ children }) => {
   const connectApi = async () => {
     try { 
       const provider = new WsProvider(PROVIDER_ENDPOINTS[network]);
+      setProvider(provider);
       const apiPromise = new ApiPromise(options({ provider }));
       await apiPromise.isReady;
       setapi(apiPromise);
@@ -30,6 +32,7 @@ export const AstarApiProvider = ({ children }) => {
     <AstarApiContext.Provider
       value={{
         api,
+        provider,
         network,
         setNetwork
       }}

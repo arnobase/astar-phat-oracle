@@ -13,21 +13,22 @@ import { Box } from '@mui/material';
 import SyncIcon from '@mui/icons-material/Sync';
 import CircularProgress from '@mui/material/CircularProgress';
 
+import dayjs from 'dayjs';
+
 export function PhatContractCall(props) {
 
   const [contract, setContract] = useState();
   const [cert, setCert] = useState();
-  const { pair, phatOk, setPhatOk, phatError, setPhatError } = useContext(AppContext);
+  const { pair, phatOk, setPhatOk, phatError, setPhatError, setQueryTime } = useContext(AppContext);
   const { api, setProvider, connectApi } = useContext(PhalaApiContext);
 
   useEffect(()=>{
     if (api) {
       loadContract()
+      setQueryTime(dayjs().valueOf());
     }
   }, [api])
   
-
-
   const loadContract = async () => {
     
         try {
@@ -65,6 +66,7 @@ export function PhatContractCall(props) {
   const feedPrices = async () => {
       console.log("feedPrices...")
       props.loading.setLoadingQuery(true);
+      setQueryTime(dayjs().valueOf());
       try {
         const result = await contract.query.feedPrices(pair.address,{cert});
         console.log('result:', result.output.toHuman())
