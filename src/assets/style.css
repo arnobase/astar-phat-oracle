@@ -14,10 +14,6 @@ body {
   animation: gradient 60s ease infinite;
   height: 100vh;
 }
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
 /* ---- particles.js container ---- */
 #particles-js {
   position: absolute;
