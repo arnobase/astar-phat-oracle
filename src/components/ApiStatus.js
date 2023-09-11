@@ -7,14 +7,14 @@ export function ApiStatus(props) {
 
     const GreenDot = ()=>{
         return <>
-            <svg fill="#00b100" width="30px" height="30px" viewBox="0 0 20.00 20.00" xmlns="http://www.w3.org/2000/svg" stroke="#00b100" stroke-width="2">
+            <svg fill="#00b100" width="30px" height="30px" viewBox="0 0 20.00 20.00" xmlns="http://www.w3.org/2000/svg" stroke="#00b100" strokeWidth="2">
                 <g id="SVGRepo_iconCarrier"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0 2.2 2.2 0 0 0-4.4 0z"></path></g>
             </svg>
         </>
     }
     const RedDot = ()=>{
         return <>
-            <svg fill="#b10000" width="30px" height="30px" viewBox="0 0 20.00 20.00" xmlns="http://www.w3.org/2000/svg" stroke="#b10000" stroke-width="2">
+            <svg fill="#b10000" width="30px" height="30px" viewBox="0 0 20.00 20.00" xmlns="http://www.w3.org/2000/svg" stroke="#b10000" strokeWidth="2">
                 <g id="SVGRepo_iconCarrier"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0 2.2 2.2 0 0 0-4.4 0z"></path></g>
             </svg>
         </>

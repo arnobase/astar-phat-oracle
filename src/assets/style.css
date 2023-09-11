@@ -1,7 +1,48 @@
 @font-face {
-    font-family: unbounded;
-    src: url(Unbounded-Regular.ttf);
+  font-family: unbounded;
+  src: url(Unbounded-Regular.ttf);
 }
 span.MuiChip-label {
-    padding-left: 0;
+  padding-left: 0;
+}
+
+/* ---- reset ---- */
+body {
+  margin: 0;
+  background: linear-gradient(-45deg, #3f2e8c, #000000, #0b4b62, #000000);
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
+  height: 100vh;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
+}
+.MuiBox-root {
+    z-index: 1;
+    position: relative;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
