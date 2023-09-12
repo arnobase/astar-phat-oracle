@@ -1,13 +1,13 @@
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import React, { useState, useEffect } from "react";
 import { options } from "@astar-network/astar-api";
-import { PROVIDER_ENDPOINTS } from "../lib/constants";
+import { PROVIDER_ENDPOINTS, DEFAULT_NETWORKS } from "../lib/constants";
 
 export const AstarApiContext = React.createContext();
 
 export const AstarApiProvider = ({ children }) => {
   const [api, setapi] = useState();
-  const [network, setNetwork] = useState("shibuya");
+  const [network, setNetwork] = useState(DEFAULT_NETWORKS["astar"]);
   const [provider, setProvider] = useState()
 
   useEffect(() => {

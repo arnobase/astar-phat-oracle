@@ -15,8 +15,11 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import dayjs from 'dayjs';
 
+import { PHAT_CONTRACT_ID, PHALA_PROVIDER_ENDPOINTS, DEFAULT_NETWORKS } from "../lib/constants";
+
 export function PhatContractCall(props) {
 
+  const endpoint = DEFAULT_NETWORKS["phala"];
   const [contract, setContract] = useState();
   const [cert, setCert] = useState();
   const { pair, phatOk, setPhatOk, phatError, setPhatError, setQueryTime } = useContext(AppContext);
@@ -32,10 +35,12 @@ export function PhatContractCall(props) {
   const loadContract = async () => {
     
         try {
-          setProvider('wss://poc5.phala.network/ws')
+          const provider = PHALA_PROVIDER_ENDPOINTS[endpoint];
+          setProvider(provider)
           
           // contract ID on phat-cb (contract address on polkadot.js.org/apps)
-          const contractId = "0xed1bf2be043050ed7b85c270b28d41d4f1b2baaee6e556dd049cc826876dd27c"
+          //const contractId = "0xed1bf2be043050ed7b85c270b28d41d4f1b2baaee6e556dd049cc826876dd27c"
+          const contractId = PHAT_CONTRACT_ID[endpoint];
          
           const phatRegistry = await OnChainRegistry.create(api)
 

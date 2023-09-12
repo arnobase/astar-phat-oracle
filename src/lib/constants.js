@@ -1,5 +1,10 @@
 export const DAPP_NAME = "Decentralized Oracles";
 
+export const DEFAULT_NETWORKS = {
+  astar: "shibuya",
+  phala: "poc5",
+}
+
 export const SS58_PREFIX = {
   astar:5,
   shiden:5,
@@ -36,9 +41,17 @@ export const PROVIDER_ENDPOINTS = {
 }
 
 export const ORACLE_CONTRACT_ADDRESS = {
-  shibuya:  "aZbYhcQUMRPBN2CvhDyyDDrv8GrtxTPNcmrxbzqhVVTvVPZ",
+  //shibuya:  "aZbYhcQUMRPBN2CvhDyyDDrv8GrtxTPNcmrxbzqhVVTvVPZ",
+  shibuya:  "af9W3PUGqE4Ki2inxJWdG9kawL5t6BM3FAWKxGrXYP2ib1f",
   shiden:   'changeit'
 };
+
+export const PHALA_PROVIDER_ENDPOINTS = {
+  poc5: "wss://poc5.phala.network/ws"
+}
+export const PHAT_CONTRACT_ID = {
+  poc5: "0x0c7c4800da26365d2fa749c7f645197f0befcfe9fae251ecffc98b4f76f6d93f"
+}
 
 import oracle_contract_metadata from "./oracle_contract_metadata.json"
 export const ORACLE_CONTRACT_ABI_METADATA = {
