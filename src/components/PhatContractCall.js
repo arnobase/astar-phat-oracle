@@ -51,7 +51,6 @@ export function PhatContractCall(props) {
          
           const contract = new PinkContractPromise(api, phatRegistry, abi, contractId, contractKey)
           setContract(contract)
-          console.log(signCertificate)
           const lcert = await signCertificate({ api, pair })
           console.log("certificat",lcert)
           console.log("pair",pair.address)
@@ -94,7 +93,6 @@ export function PhatContractCall(props) {
       
   }
 
-  console.log(props?.loading?.loadingQuery);
   const message=phatOk ? "Query has been executed succesfully!" : phatError ? "Error during rollup query: "+phatError+" - Please try again" : "Click to send Rollup query";
   return (<>
         <Box display="flex" alignItems="center" justifyContent="left" >

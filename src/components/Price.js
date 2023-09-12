@@ -33,7 +33,6 @@ export function Price(props) {
     const previousUpdate = lastUpdate;
     const {data} = await getTradingPair(props.pairId);
     const newUpdate = data.Ok.lastUpdate.replace(/,/g,"")
-    console.log(previousUpdate, newUpdate, queryTime);
     if (!queryTime || (previousUpdate !== newUpdate && newUpdate > queryTime)) {
       const formatedPrice = formatTokenBalance(data.Ok.value.replace(/,/g,""),"USD",18)
       console.log("price",data,formatedPrice)
