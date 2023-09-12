@@ -18,13 +18,13 @@ export function Content() {
   const [loadingPrices, setLoadingPrices] = useState(false)
 
   return <>
-  <Box sx={{backgroundColor:"#202020", borderRadius:3}} m={"10px 0"} p={"20px 25px 20px 20px"}>
+  <Box sx={{backgroundColor:"#000", borderRadius:3}} m={"10px 0"} p={"20px 25px 20px 20px"}>
     <Box display={'flex'}>
       <PhatContractCall loading={{loadingQuery, setLoadingQuery}} />
       <ApiStatus context="phala" />
     </Box>
   </Box>
-  <Box sx={{backgroundColor:"#202020", borderRadius:3, p:3}}>
+  <Box sx={{backgroundColor:"#000", borderRadius:3, p:3}}>
     <Box display={'flex'} alignItems="center">
       Updated: {dayjs(Number(lastUpdate)).format('YYYY/MM/DD - HH:mm:ss')} 
       <CircularProgress

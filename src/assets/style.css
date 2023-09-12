@@ -9,7 +9,7 @@ span.MuiChip-label {
 /* ---- reset ---- */
 body {
   margin: 0;
-  background: linear-gradient(-45deg, #3f2e8c, #000000, #0b4b62, #000000);
+  background: linear-gradient(-45deg, #2d2163, #101010, #052a38, #101010);
   background-size: 400% 400%;
   animation: gradient 60s ease infinite;
   height: 100vh;
