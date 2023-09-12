@@ -29,5 +29,21 @@ export const coins = {
         pairId: 190,
         image: "https://assets.coingecko.com/coins/images/22459/large/glmr.png?1641880985"
     },
+    binancecoin: {
+        ticker: "BNB",
+        pairId: 3,
+        image: "https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png?1644979850"
+    },
+    shiden: {
+        ticker: "SDN",
+        pairId: 720,
+        image: "https://assets.coingecko.com/coins/images/18027/large/tFOtjrr3_400x400.png?1630291767"
+    },
+    kusama: {
+        ticker: "KSM",
+        pairId: 171,
+        image: "https://assets.coingecko.com/coins/images/9568/large/m4zRhP5e_400x400.jpg?1576190080"
+    },
+
 
 }

@@ -2,6 +2,8 @@ import { PhalaApiContext } from '../context/PhalaApiProvider';
 import { AstarApiContext } from '../context/AstarApiProvider';
 import { useContext } from 'react';
 import { Box, Chip, Tooltip } from '@mui/material';
+import { DEFAULT_NETWORKS, ORACLE_CONTRACT_ADDRESS, PHAT_CONTRACT_ID } from '../lib/constants';
+import {Typography} from '@mui/material';
 
 export function ApiStatus(props) {
 
@@ -36,10 +38,11 @@ export function ApiStatus(props) {
     const provider = apis[props.context].provider
 
     const context = props.context.charAt(0).toUpperCase() + props.context.slice(1);
-    console.log("Api.isReady",api?._isReady)
+
+    const address = props.context === "astar" ? ORACLE_CONTRACT_ADDRESS[DEFAULT_NETWORKS[props.context]] : PHAT_CONTRACT_ID[DEFAULT_NETWORKS[props.context]]
     console.log("Api.provider",provider?.endpoint)
     return (<>
-        <Tooltip placement="top" title={provider?.endpoint}>
+        <Tooltip placement="top" title={<><Typography m={"5px 0"} p={0}>{provider?.endpoint}</Typography>{address}</>}>
             <Box display="flex" alignItems="center" sx={{marginLeft:"auto"}}>
                 <Chip icon={<StatusDot api={api} />} label={context+" testnet"} />
                 
