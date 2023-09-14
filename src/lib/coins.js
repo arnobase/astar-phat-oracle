@@ -1,3 +1,6 @@
+import shiden_logo from "../images/Shiden.svg";
+import astar_logo from "../images/Astar.svg";
+
 export const coins = {
     bitcoin: {
         ticker: "BTC",
@@ -17,7 +20,8 @@ export const coins = {
     astar: {
         ticker: "ASTR",
         pairId: 147,
-        image: "https://assets.coingecko.com/coins/images/22617/large/astr.png?1642314057"
+        //image: "https://assets.coingecko.com/coins/images/22617/large/astr.png?1642314057"
+        image: astar_logo
     },
     phala: {
         ticker: "PHA",
@@ -37,7 +41,8 @@ export const coins = {
     shiden: {
         ticker: "SDN",
         pairId: 720,
-        image: "https://assets.coingecko.com/coins/images/18027/large/tFOtjrr3_400x400.png?1630291767"
+        //image: "https://assets.coingecko.com/coins/images/18027/large/tFOtjrr3_400x400.png?1630291767"
+        image: shiden_logo
     },
     kusama: {
         ticker: "KSM",
