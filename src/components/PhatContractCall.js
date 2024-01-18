@@ -7,7 +7,8 @@ import { PinkContractPromise, OnChainRegistry, signCertificate } from '@phala/sd
 import { AppContext } from "../context/ContextProvider";
 import { PhalaApiContext } from '../context/PhalaApiProvider';
 
-import metadata from "../lib/phat_contract_metadata.json";
+//import metadata from "../lib/phat_contract_metadata.json";
+import metadata from "../lib/phat_price_feed.json";
 
 import { Box } from '@mui/material';
 import SyncIcon from '@mui/icons-material/Sync';

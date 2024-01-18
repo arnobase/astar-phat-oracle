@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Box, Grid } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Price } from './Price';
 import List from '@mui/material/List';
@@ -18,6 +18,7 @@ export function Content() {
   const [loadingPrices, setLoadingPrices] = useState(false)
 
   return <>
+  <Container sx={{pt:4}} maxWidth="md">
   <Box sx={{backgroundColor:"#202020", borderRadius:3}} m={"10px 0"} p={"20px 25px 20px 20px"}>
     <Box display={'flex'}>
       <PhatContractCall loading={{loadingQuery, setLoadingQuery}} />
@@ -49,6 +50,7 @@ export function Content() {
   <Box>
     <img style={{width:"100%"}} src={rollupSVG} alt="SVG as an image" />
   </Box>
+  </Container>
   </>
   
 }

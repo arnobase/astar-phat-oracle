@@ -2,7 +2,7 @@ export const DAPP_NAME = "Decentralized Oracles";
 
 export const DEFAULT_NETWORKS = {
   astar: "shibuya",
-  phala: "poc5",
+  phala: "poc6",
 }
 
 export const SS58_PREFIX = {
@@ -42,19 +42,20 @@ export const PROVIDER_ENDPOINTS = {
 
 export const ORACLE_CONTRACT_ADDRESS = {
   //shibuya:  "aZbYhcQUMRPBN2CvhDyyDDrv8GrtxTPNcmrxbzqhVVTvVPZ",
-  shibuya:  "af9W3PUGqE4Ki2inxJWdG9kawL5t6BM3FAWKxGrXYP2ib1f",
+  shibuya:  "XCHJ7ryamT3zvzMcnqStWf84GtgzoQoAqZXQNFybqhq5ugL",
   shiden:   'changeit'
 };
 
 export const PHALA_PROVIDER_ENDPOINTS = {
-  poc5: "wss://poc5.phala.network/ws"
+  poc6: "wss://poc6.phala.network/ws"
 }
 export const PHAT_CONTRACT_ID = {
-  poc5: "0x0c7c4800da26365d2fa749c7f645197f0befcfe9fae251ecffc98b4f76f6d93f"
+  poc6: "0x445ae4eae802917af8ac3e7e357f6da9f708bcbcfa0f71c83d747c61260d6bf2"
 }
 
-import oracle_contract_metadata from "./oracle_contract_metadata.json"
+//import oracle_contract_metadata from "./oracle_contract_metadata.json"
+import shibuya_price_feed_consumer from "./shibuya_price_feed_consumer.json"
 export const ORACLE_CONTRACT_ABI_METADATA = {
-  shibuya:  oracle_contract_metadata,
-  shiden:   oracle_contract_metadata
+  shibuya:  shibuya_price_feed_consumer,
+  shiden:   shibuya_price_feed_consumer
 };

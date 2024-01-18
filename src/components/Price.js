@@ -48,7 +48,7 @@ export function Price(props) {
   }
 
   return (<>
-    <ListItem key={props.ticker} alignItems="flex-start">
+    <ListItem sx={{overflow:"auto"}} key={props.ticker} alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt={props.ticker} src={props.image} />
         </ListItemAvatar>
