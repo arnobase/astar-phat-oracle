@@ -10,6 +10,7 @@ import fs from 'fs/promises';
 export default defineConfig(() => ({
   root: '.',
   build: {
+    emptyOutDir: true,
     outDir: '../dist/price-feed'
   },
   base: '/price-feed',
